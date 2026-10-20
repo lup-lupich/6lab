@@ -59,17 +59,11 @@ int task1() {
 
 int task2() {
 	float x;
-	float F;
 	printf("Введите x\n");
 	scanf("%f", &x);
-	if (x <= 7) {        //при x = 5: F(x) = 15 - 9 = 6
-		F = 3 * x - 9;
-		printf("%f\n\n", F);
-	}
-	else {               //при x = 10: F(x) = 1/96 = 0,010417 
-		F = 1 / (pow(x, 2) - 4);
-		printf("%f\n\n", F);
-	}
+	printf("F(x) = %f\n\n", (x <= 7) ? (3 * x - 9) : (1 / (pow(x, 2) - 4)));
+	//при x = 5: F(x) = 15 - 9 = 6
+	//при x = 10: F(x) = 1/96 = 0,010417 
 
 	return 0;
 }
